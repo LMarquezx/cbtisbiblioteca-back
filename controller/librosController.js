@@ -6,7 +6,17 @@ class LibroController {
         const libros = await libroService.getAllLibros();
         res.status(200).json(libros);
         } catch (err) {
-        res.status(400).json({ message: err.message });
+        res.status(500).json({ message: err.message });
+        }
+    }
+
+    async getByCategoria(req,res){
+        try{
+            console.log("Entra al controlador: ");
+            const libros = await libroService.filterByCat(req.body.cat);
+            res.status(200).json(libros);
+        }catch(err){
+            res.status(500).json({message:err.message});
         }
     }
 }
