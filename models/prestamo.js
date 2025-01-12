@@ -5,6 +5,7 @@ const prestamoSchema = new mongoose.Schema({
     nombreCompleto: {type:String, required:true},
     noControl: {type:Number, required:true },
     semestre:{type:Number, required:true},
+    especialidad:{type:String, required:true},
     tituloLibro:{type:String,required:true},
     id_libro:{type:String,required:true},
     fechaDevolucion:{type:String,required:true}

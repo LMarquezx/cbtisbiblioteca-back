@@ -12,5 +12,7 @@ router.post('/libros/filterName',libroController.getByTitulo);
 router.get('/estudiantes', estudianteController.getAllStudent);
 router.post('/newStudent', estudianteController.saveStudent);
 router.post('/prestamo', prestamoController.savePrestamoNuevo);
+router.get('/prestamos/all', prestamoController.getAllPrestamos);
+router.post('/prestamos/byName', prestamoController.getByNamePrestamo);
 
 module.exports = router;
